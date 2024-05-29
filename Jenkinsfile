@@ -47,7 +47,7 @@ pipeline {
         stage('Deploy to TEST') {
             when { not { branch "main" } }
             steps {
-                '''
+                sh '''
 oc set image deployment home-automation \
 home-automation=quay.io/${QUAY_USR}/do400-deploying-ab:build-${BUILD_NUMBER} \
 -n xudlbs-deploying-lab-test --record
