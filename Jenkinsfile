@@ -37,7 +37,7 @@ pipeline {
                         -Dquarkus.container-image.username=$QUAY_USR \
                         -Dquarkus.container-image.password="$QUAY_PSW" \
                         -Dquarkus.container-image.tag=build-${BUILD_NUMBER} \
-                        -Dquarkus.container-image.tags=latest \
+                        -Dquarkus.container-image.additional-tags=latest \
                         -Dquarkus.container-image.push=true
                         '''
 
