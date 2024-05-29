@@ -8,11 +8,7 @@ pipeline {
    
     
     stages {
-        stage ('Install Dependencies') {
-            steps {
-                sh "mvn quarkus:add-extension -Dextensions="container-image-jib"
-                }
-            }
+        
         
      
         stage ('Unit Tests') {
